@@ -1,0 +1,42 @@
+let result = axios.get("http://www.devcodecampmusiclibrary.com/api/music").then(data =>console.log(data)).catch()
+
+
+    let music = axios.get("http://www.devcodecampmusiclibrary.com/api/music").then(data =>console.log(data)).catch()
+    
+    async function apiCall(){
+        
+        try{
+            let music = await axios.get("http://www.devcodecampmusiclibrary.com/api/music");
+            this.setState(music.data);
+        }
+        catch(err){
+            console.log(err);
+        }
+        return music.data;
+    }
+     
+    
+
+       <table>
+            <caption>Our music</caption>
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Album</th>
+                <th>Artist</th>
+                <th>Genre</th>
+                <th>Release Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            {mData.map(mData => (
+                <tr key={mData.id}>
+                <td>{mData.title}</td>
+                <td>{mData.album}</td>
+                <td>{mData.artist}</td>
+                <td>{mData.genre}</td>
+                <td>{mData.releaseDate}</td>
+                </tr>
+            ))}
+            </tbody>
+        </table>
