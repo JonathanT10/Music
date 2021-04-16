@@ -40,3 +40,49 @@ let result = axios.get("http://www.devcodecampmusiclibrary.com/api/music").then(
             ))}
             </tbody>
         </table>
+
+
+
+         return(
+            <table>
+            <caption>Our music</caption>
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Album</th>
+                <th>Artist</th>
+                <th>Genre</th>
+                <th>Release Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            {mData.filter(function(music){
+                <tr key={mData.id}>
+                <td>{mData.title}</td>
+                <td>{mData.album}</td>
+                <td>{mData.artist}</td>
+                <td>{mData.genre}</td>
+                <td>{mData.releaseDate}</td>
+                </tr>
+            }
+         }
+        }
+            </tbody>
+        </table>
+        );
+
+
+
+        
+    async apiCall(){
+        try{
+            let result = await axios.get("http://www.devcodecampmusiclibrary.com/api/music");
+            this.setState({
+                music: result.data
+            })
+            return this.state.music
+        }
+        catch(err){
+                    console.log(err);
+                }
+    }

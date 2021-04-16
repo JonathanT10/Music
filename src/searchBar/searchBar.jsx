@@ -1,21 +1,21 @@
 import React from 'react';
 import './searchBar.css';
 
-const SearchBar = () => (
-    <form action="/" method="get">
-        <label htmlFor="header-search">
-            <span className="visually-hidden">Search music</span>
-        </label>
+
+const SearchBar = ({searchMusic}) => {
+    return (
+        <>
         <input
             type="text"
             id="header-search"
             placeholder="Search music"
-            name="s" 
+            name="s"
+            onChange={searchMusic} 
         />
-        <button type="submit">Search</button>
-    </form>
-);
-
+        <button >Search</button>
+        </>
+    );
+}
   export default SearchBar;
 
 
