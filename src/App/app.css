@@ -1,4 +1,19 @@
-h1 {
+.title {
+    font-family: 'Teko', sans-serif;
+    text-align: center;
+    font-size: 3em;
+    text-shadow:3px 3px rgba(157, 227, 255, 0.678);
+}
+
+.nav {
     text-align: center;
     font-size: 1em;
 }
+
+.search {
+    text-align: center;
+    font-size: 1px;
+}
+
+
+

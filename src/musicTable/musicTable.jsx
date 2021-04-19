@@ -1,12 +1,13 @@
 import React from 'react';
+import './musicTable.css';
 
 
 
 function musicTable(props){
     let music = props.mData
     return(
-       <table>
-       <caption>Our music</caption>
+       <table className="center">
+       <caption>Your music</caption>
        <thead>
        <tr>
            <th>Title</th>

@@ -46,14 +46,14 @@ class App extends Component {
 
     render(){
         const filterSearch = this.state.music.filter(song => {
-            return song.title.toLowerCase().includes(this.state.searching)
+            return song.title.toLowerCase().includes(this.state.searching) || song.album.toLowerCase().includes(this.state.searching) || song.artist.toLowerCase().includes(this.state.searching) || song.genre.toLowerCase().includes(this.state.searching) || song.releaseDate.includes(this.state.searching)
         })
-        console.log(filterSearch);
         return(
-            <div>
-                <h1>Music Library</h1>
-                <h3><NavBar /></h3> 
-               <h2><SearchBar searchMusic={this.searchMusic} /></h2> 
+ 
+            <div className="main">
+                <h3 className="nav"><NavBar /></h3> 
+                <h1 className="title">Music Library</h1>
+               <h2 className="search"><SearchBar searchMusic={this.searchMusic} /></h2> 
                
                 <MusicTable mData={filterSearch} />
                 

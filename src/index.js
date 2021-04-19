@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App/app';
+import './index.css'
 
 
 
 
-const jsxElement = <h1><App /></h1>;
+const jsxElement = <h1 className="main"><App /></h1>;
 console.log(jsxElement);
 
 

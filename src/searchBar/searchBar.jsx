@@ -12,7 +12,6 @@ const SearchBar = ({searchMusic}) => {
             name="s"
             onChange={searchMusic} 
         />
-        <button >Search</button>
         </>
     );
 }
